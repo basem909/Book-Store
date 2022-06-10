@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav>
       <Link to="/">BOOKS</Link>
-      <Link to="/categories">CATEGORIES</Link>
+      <Link to="/Categories">CATEGORIES</Link>
     </nav>
   );
 }
