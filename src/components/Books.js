@@ -1,6 +1,6 @@
 import React from 'react';
 import Book from './Book';
-import newBook from './NewBook';
+import NewBook from './NewBook';
 
 const Books = () => {
   const booksList = [
@@ -33,7 +33,7 @@ const Books = () => {
           <Book topic={book.topic} title={book.title} author={book.author} />
         </div>
       ))}
-      <newBook onSubmit={submitHandler} />
+      <NewBook onSubmit={submitHandler} />
     </div>
   );
 };
