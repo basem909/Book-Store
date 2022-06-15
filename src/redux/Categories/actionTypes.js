@@ -1,1 +1,2 @@
-export const checkStatus = 'checkStatus';
+const checkStatus = 'checkStatus';
+export default checkStatus;

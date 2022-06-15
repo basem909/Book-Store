@@ -1,3 +1,4 @@
-import { checkStatus } from './actionTypes';
+import checkStatus from './actionTypes';
 
-export const statusChecker = () => ({ type: checkStatus });
+const statusChecker = () => ({ type: checkStatus });
+export default statusChecker;

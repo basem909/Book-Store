@@ -1,6 +1,6 @@
 import { createStore, combineReducers } from 'redux';
-import { reducer as cateReducer } from './Categories/categories';
-import { reducer as bookReducer } from './Books/books';
+import cateReducer from './Categories/categories';
+import bookReducer from './Books/books';
 
 const reducers = combineReducers({
   books: bookReducer,

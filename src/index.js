@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import store from './redux/Store';
 import { addBook, removeBook } from './redux/Books/actions';
-import { statusChecker } from './redux/Categories/actions';
+import statusChecker from './redux/Categories/actions';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,17 +16,14 @@ root.render(
   </React.StrictMode>,
 );
 
-store.dispatch(addBook('the impossible', 'farouk'));
-store.dispatch(addBook('the impossible 2', 'ahed'));
-store.dispatch(addBook('the impossible 3', 'zaki'));
+store.dispatch(addBook('book 1', 'author 1'));
+store.dispatch(addBook('book 2', 'author 2'));
+store.dispatch(addBook('book 3', 'author 3'));
 
 store.dispatch(removeBook(2));
-store.dispatch(addBook('the impossible 2', 'ahead'));
+store.dispatch(addBook('book 2', 'author 2'));
 store.dispatch(removeBook(3));
-store.dispatch(addBook('the impossible 2', 'ahead'));
+store.dispatch(addBook('book 4', 'author 4'));
 
 store.dispatch(removeBook(1));
 store.dispatch(statusChecker());
-
-
-console.log(store.getState());

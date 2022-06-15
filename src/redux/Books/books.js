@@ -1,6 +1,6 @@
 import { bookAdded, bookRemoved } from './actionTypes';
 
-export  function reducer(state = [], action) {
+const bookReducer = function reducer(state = [], action) {
   switch (action.type) {
     case bookAdded:
       return [
@@ -18,4 +18,6 @@ export  function reducer(state = [], action) {
     default:
       return state;
   }
-}
+};
+
+export default bookReducer;
