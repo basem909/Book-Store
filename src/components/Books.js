@@ -1,11 +1,20 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import Book from './Book';
-import NewBook from './NewBook';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addBook } from "../redux/Books/actions";
+import store from "../redux/Store";
+import Book from "./Book";
+import NewBook from "./NewBook";
 
 const Books = () => {
   const booksList = useSelector((state) => state.books);
-  const submitHandler = () => {};
+  const dispatcher = useDispatch();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const title = document.getElementById("title");
+    const author = document.getElementById("author");
+    const topic = document.getElementById("topic");
+    dispatcher(addBook(title.value, author.value, topic.value));
+  };
 
   return (
     <div>
@@ -14,7 +23,7 @@ const Books = () => {
           <Book topic={book.topic} title={book.title} author={book.author} />
         </div>
       ))}
-      <NewBook onSubmit={submitHandler} />
+      <NewBook submitHandler={submitHandler} />
     </div>
   );
 };

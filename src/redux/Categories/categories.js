@@ -1,6 +1,6 @@
 import checkStatus from './actionTypes';
 
-const cateReducer = function reducer(state = [], action) {
+const cateReducer = function reducer(state = 'Categories', action) {
   switch (action.type) {
     case checkStatus:
       return 'Under construction';

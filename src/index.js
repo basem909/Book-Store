@@ -19,10 +19,3 @@ root.render(
   </React.StrictMode>,
 );
 
-store.dispatch(addBook('book 1', 'author 1', 'action'));
-store.dispatch(addBook('book 2', 'author 2', 'thriller'));
-store.dispatch(addBook('book 3', 'author 3', 'horror'));
-
-store.dispatch(addBook('book 2', 'author 2', 'sports'));
-store.dispatch(addBook('book 4', 'author 4', 'tragedy'));
-store.dispatch(statusChecker());

@@ -28,7 +28,7 @@ const bookReducer = function reducer(state = booksList, action) {
         {
           id: state.length + 1,
           topic: action.payload.topic,
-          title: action.payload.bookTitle,
+          title: action.payload.title,
           author: action.payload.author,
         },
       ];
