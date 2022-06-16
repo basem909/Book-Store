@@ -8,6 +8,8 @@ export default function newBook({ submitHandler }) {
       <form onSubmit={submitHandler}>
         <input type="text" name="newBook" placeholder="Book Title" />
         <input type="text" name="newAuthor" placeholder="Author" />
+        <input type="text" name="newTopic" placeholder="Book Topic" />
+
         <button type="submit">ADD BOOK</button>
       </form>
     </div>

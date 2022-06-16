@@ -1,29 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import NewBook from './NewBook';
 
 const Books = () => {
-  const booksList = [
-    {
-      id: 1,
-      topic: 'Action',
-      title: 'The Hunger Games',
-      author: 'Suzanne Collins',
-    },
-    {
-      id: 2,
-      topic: 'Science Fiction',
-      title: 'Dune',
-      author: 'Frank Herbert',
-    },
-    {
-      id: 3,
-      topic: 'Economy',
-      title: 'Capital in the Twenty-First Century',
-      author: 'Suzanne Collins',
-    },
-  ];
-
+  const booksList = useSelector((state) => state.books);
   const submitHandler = () => {};
 
   return (
