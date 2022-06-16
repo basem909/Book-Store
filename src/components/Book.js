@@ -1,7 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Book = ({ topic, title, author, clickHandler, id }) => (
+const Book = ({
+  topic, title, author, clickHandler, id,
+}) => (
   <div className="container">
     <h4>{topic}</h4>
     <h3>{title}</h3>
