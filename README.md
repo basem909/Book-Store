@@ -43,9 +43,9 @@ This project is MIT licensed.
 
 To get a local copy up and running follow these simple example steps.
 
-- Copy this link `https://github.com/basem909/React-project.git`.
+- Copy this link `https://github.com/basem909/Book-Store.git`.
 - Get the directory that you want to clone the repository.
 - Open the command prompt in this directory.
-- Write `git clone https://github.com/basem909/React-project.git`.
-- Go to the repository folder in your command prompt, run `cd React-project`.
+- Write `git clone https://github.com/basem909/Book-Store.git`.
+- Go to the repository folder in your command prompt, run `cd Book-Store`.
 - Run `npm install`

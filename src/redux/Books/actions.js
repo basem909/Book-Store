@@ -1,10 +1,11 @@
 import { bookAdded, bookRemoved } from './actionTypes';
 
-export const addBook = (bookTitle, author) => ({
+export const addBook = (title, author, topic) => ({
   type: bookAdded,
   payload: {
-    bookTitle,
+    title,
     author,
+    topic,
   },
 });
 

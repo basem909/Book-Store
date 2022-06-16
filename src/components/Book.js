@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ topic, title, author }) => (
+const Book = ({
+  topic, title, author, clickHandler, id,
+}) => (
   <div className="container">
     <h4>{topic}</h4>
     <h3>{title}</h3>
@@ -11,7 +13,7 @@ const Book = ({ topic, title, author }) => (
         Comments
       </button>
       |
-      <button type="button" disabled>
+      <button type="button" onClick={() => clickHandler(id)} id={id}>
         Remove
       </button>
       |
@@ -28,6 +30,8 @@ Book.propTypes = {
   topic: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  clickHandler: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Book;
