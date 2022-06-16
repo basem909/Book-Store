@@ -1,10 +1,6 @@
 import React from 'react';
-import { useDispatch } from "react-redux";
-import { addBook } from '../redux/Books/actions';
 
-
-
-export default function newBook({submitHandler}) {
+export default function newBook({ submitHandler }) {
   return (
     <div className="newBook-container">
       <h2>ADD NEW BOOK</h2>
