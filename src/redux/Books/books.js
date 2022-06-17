@@ -1,33 +1,13 @@
-import { bookAdded, bookRemoved } from './actionTypes';
+import { bookAdded, bookRemoved, ShowBooks } from './actionTypes';
 
-const booksList = [
-  {
-    id: 1,
-    topic: 'Action',
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-  },
-  {
-    id: 2,
-    topic: 'Science Fiction',
-    title: 'Dune',
-    author: 'Frank Herbert',
-  },
-  {
-    id: 3,
-    topic: 'Economy',
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-  },
-];
-const bookReducer = function reducer(state = booksList, action) {
+const bookReducer = function reducer(state = [], action) {
   switch (action.type) {
     case bookAdded:
       return [
         ...state,
         {
-          id: state.length + 1,
-          topic: action.payload.topic,
+          id: action.payload.id,
+          category: action.payload.category,
           title: action.payload.title,
           author: action.payload.author,
         },
@@ -35,6 +15,9 @@ const bookReducer = function reducer(state = booksList, action) {
 
     case bookRemoved:
       return state.filter((book) => book.id !== action.payload.id);
+
+    case ShowBooks:
+      return action.payload;
 
     default:
       return state;
