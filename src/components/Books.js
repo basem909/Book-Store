@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook, removeBook } from '../redux/Books/actions';
 import Book from './Book';
 import NewBook from './NewBook';
@@ -11,8 +12,12 @@ const Books = () => {
     e.preventDefault();
     const title = document.getElementById('title');
     const author = document.getElementById('author');
-    const topic = document.getElementById('topic');
-    dispatcher(addBook(title.value, author.value, topic.value));
+    const category = document.getElementById('category');
+    const idCounter = uuidv4();
+    dispatcher(addBook(title.value, author.value, category.value, idCounter));
+    title.value = '';
+    author.value = '';
+    category.value = '';
   };
   const clickHandler = (id) => {
     dispatcher(removeBook(id));
@@ -23,7 +28,7 @@ const Books = () => {
       {booksList.map((book) => (
         <div key={book.id} className="book-section">
           <Book
-            topic={book.topic}
+            category={book.category}
             title={book.title}
             author={book.author}
             id={book.id}
