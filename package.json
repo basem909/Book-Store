@@ -16,7 +16,10 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
     "uuid": "^8.3.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@react-icons/all-files": "^4.1.0",
+    "@tomik23/react-circular-progress-bar": "^1.1.1",
+    "react-icons": "^4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
