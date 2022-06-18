@@ -13,8 +13,10 @@ function App() {
   }, [dispatch]);
   return (
     <div className="App">
-      <h1> Bookstore Cms</h1>
-      <NavBar />
+      <div className="title-container">
+        <h1 className="title"> Bookstore CMS </h1>
+        <NavBar />
+      </div>
       <Routes>
         <Route path="/" element={<Books />} />
         <Route path="/categories" element={<Categories />} />
