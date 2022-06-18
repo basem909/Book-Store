@@ -24,7 +24,7 @@ const Books = () => {
   };
 
   return (
-    <div className='books-container'>
+    <div className="books-container">
       {booksList.map((book) => (
         <div key={book.id} className="book-section">
           <Book

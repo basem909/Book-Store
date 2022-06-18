@@ -7,7 +7,7 @@ const Categories = () => {
   const dispatcher = useDispatch();
 
   return (
-    <div className='category-container'>
+    <div className="category-container">
       <h2>{categoriesList}</h2>
       <button type="button" onClick={() => { dispatcher(statusChecker()); }}>CHECK STATUS</button>
     </div>

@@ -1,8 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { CircularProgressBar } from "@tomik23/react-circular-progress-bar";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { CircularProgressBar } from '@tomik23/react-circular-progress-bar';
 
-const Book = ({ category, title, author, clickHandler, id }) => (
+const Book = ({
+  category, title, author, clickHandler, id,
+}) => (
   <div className="book-container">
     <div className="book-banner">
       <h4>{category}</h4>
@@ -28,14 +30,18 @@ const Book = ({ category, title, author, clickHandler, id }) => (
         colorCircle="#f1f1f1"
         colorSlice="#FF6D00"
         percent={Math.floor(Math.random() * 100) + 15}
-        linearGradient={["#379cf6", "#307bbe"]}
+        linearGradient={['#379cf6', '#307bbe']}
         size={150}
       />
       <h4>Completed</h4>
     </div>
     <div className="progress">
-      <label>current chapter</label>
-      <p>Chapter {Math.floor(Math.random() * 30)}</p>
+      <span>current chapter</span>
+      <p>
+        Chapter
+        {' '}
+        {Math.floor(Math.random() * 30)}
+      </p>
       <button type="button">Update Progress</button>
     </div>
   </div>
